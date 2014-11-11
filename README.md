@@ -10,3 +10,8 @@ Look into using
 
 to make this work on heroku as per
 [https://github.com/heroku/heroku-buildpacks](https://github.com/heroku/heroku-buildpacks)
+
+hmm, looks like there's a working fork according to [https://github.com/jkotchoff/heroku_rails_microsoft_access_mdb_example/issues/1](https://github.com/jkotchoff/heroku_rails_microsoft_access_mdb_example/issues/1). let's try this by first deploying the rails app and then running:
+```
+heroku config:set BUILDPACK_URL=https://github.com/Ignitewithus/heroku-buildpack-mdbtools.git\#242c5c24878f84d8747c48f7aca8f5444b261d97
+```
