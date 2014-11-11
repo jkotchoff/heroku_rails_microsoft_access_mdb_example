@@ -15,3 +15,5 @@ hmm, looks like there's a working fork according to [https://github.com/jkotchof
 ```
 heroku config:set BUILDPACK_URL=https://github.com/Ignitewithus/heroku-buildpack-mdbtools.git\#242c5c24878f84d8747c48f7aca8f5444b261d97
 ```
+
+ah, it looks like the issue here is that the mdbtools buildpack is overriding the ruby buildpack (ie. according to https://devcenter.heroku.com/articles/buildpacks#using-a-custom-buildpack you can only use one)
