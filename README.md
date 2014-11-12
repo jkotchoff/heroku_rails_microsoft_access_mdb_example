@@ -48,6 +48,9 @@ ie.
 > heroku create rails-access-mdb-example
 > git push heroku master
 > heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-ruby
+> touch <somefile>
+> git add <somefile>
+> git commit
 > git push heroku master
 ```
 
@@ -57,5 +60,12 @@ and
 https://github.com/Ignitewithus/heroku-buildpack-mdbtools.git#242c5c24878f84d8747c48f7aca8f5444b261d97
 https://github.com/heroku/heroku-buildpack-ruby.git
 ```
+
+Note that you will perhaps see this error when you build:
+```
+> status: Unable to connect to system bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+```
+however as per [this issue](https://github.com/jkotchoff/heroku_rails_microsoft_access_mdb_example/issues/1), it shouldn't affect anything.
+
 
 Hope this helps for anyone else out there who needs to talk to an Access database from Rails!
