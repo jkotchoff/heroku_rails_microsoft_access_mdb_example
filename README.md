@@ -41,6 +41,10 @@ However, in order to use a custom buildpack like that in conjunction with rails 
 Enter:
 [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) as per this [blog post](http://www.base2.io/2014/03/14/using-multi-buildpacks-to-deploy-a-yeoman-bower-grunt-application-on-rails)
 
+UPDATE:
+Heroku have taken over support of this multi-buildpack. It would be best to now use:
+[https://github.com/heroku/heroku-buildpack-multi](https://github.com/heroku/heroku-buildpack-multi)
+
 ie. by associating the heroku-buildpack-multi buildpack to your rails app and adding a .buildpacks configuration [like this](https://github.com/jkotchoff/heroku_rails_microsoft_access_mdb_example/blob/master/.buildpacks), you can deploy a rails app like this normally and then associate the Ignitewithus/heroku-buildpack-mdbtools buildpack afterwards.
 
 ie.
